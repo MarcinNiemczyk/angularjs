@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "john",
+      "salary": 6000,
+      "value": 12000,
+      "seniority": "junior",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "arnold",
+      "salary": 12000,
+      "value": 20000,
+      "seniority": "mid",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "jimmy",
+      "salary": 25000,
+      "value": 40000,
+      "seniority": "senior",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "joshua",
+      "salary": 7000,
+      "value": 15000,
+      "seniority": "mid",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<div class="content">
+    <div ng-controller="MainController">
+        <button ng-click="order='name'">Order by name</button>
+        <button ng-click="order='seniority'">Order by seniority</button>
+        <input type="text" ng-model="search" placeholder="Search for an employee">
+        <ul>
+            <li ng-repeat="employee in employees | orderBy: order | filter: search" ng-show="employee.active">
+                {{employee.name}} - {{employee.salary | currency: '$'}}
+                <div class="remove" ng-click="removeEmployee(employee)">x</div>
+                <span class="seniority" style="background-color: {{seniorityColors[employee.seniority]}};">{{employee.seniority}}</span>
+            </li>
+        </ul>
+        <form ng-submit="addEmployee()">
+            <input type="text" placeholder="name" ng-model="newemployee.name">
+            <input type="text" placeholder="salary" ng-model="newemployee.salary">
+            <input type="text" placeholder="value" ng-model="newemployee.value">
+            <select name="seniority" id="seniority" ng-model="newemployee.seniority">
+                <option ng-repeat="seniority in seniorityLevels" value="{{seniority}}">{{seniority}}</option>
+            </select>
+            <input type="submit" value="Add a customer">
+        </form>
+    </div>
+</div>
